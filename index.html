@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINS SHOP - Full Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-neon: #00d2ff;
+            --secondary-neon: #9d50bb;
+            --accent-neon: #ff0055;
+            --bg-dark: #0a0a0c;
+            --glass-bg: rgba(255, 255, 255, 0.07);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+
+        body {
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .controller-container {
+            width: 100%;
+            max-width: 550px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 35px;
+            padding: 20px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        header { text-align: center; margin-bottom: 25px; }
+        .logo-main { font-size: 2.2rem; font-weight: 900; color: #fff; text-shadow: 0 0 15px var(--primary-neon); }
+        .collab { font-size: 0.9rem; color: #ccc; margin-top: 5px; }
+        .collab span { color: var(--primary-neon); font-weight: bold; }
+
+        .service-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 4px solid var(--primary-neon);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .price-tag {
+            color: #fff;
+            font-weight: bold;
+            background: rgba(0, 210, 255, 0.2);
+            padding: 2px 10px;
+            border-radius: 5px;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .btn-wa {
+            background: #25d366;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .pay-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #ff0055, #ff5e3a);
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        .features span i { color: #2ecc71; margin-left: 5px; }
+
+    </style>
+</head>
+<body>
+
+<div class="controller-container">
+    <header>
+        <div class="logo-main">🚀 TWINS SHOP</div>
+        <div class="collab">🤝 بالتعاون مع <span>Oussama Shop</span></div>
+    </header>
+
+    <div class="service-card" style="border-color: #1877F2;">
+        <div class="service-header" style="color: #1877F2;"><i class="fab fa-facebook"></i> متابعين فايسبوك</div>
+        <div class="price-item"><span>👥 1k متابع</span> <span class="price-tag">2 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👥 2k متابع</span> <span class="price-tag">2.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👥 10k متابع</span> <span class="price-tag">9 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+    </div>
+
+    <div class="service-card" style="border-color: #ff0055;">
+        <div class="service-header" style="color: #ff0055;"><i class="fab fa-tiktok"></i> مشاهدات تيك توك</div>
+        <div class="price-item"><span>▶️ 10k مشاهدة</span> <span class="price-tag">1.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>▶️ 30k مشاهدة</span> <span class="price-tag">3 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>▶️ 40k مشاهدة</span> <span class="price-tag">3.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+    </div>
+
+    <div class="service-card" style="border-color: #E1306C;">
+        <div class="service-header" style="color: #E1306C;"><i class="fab fa-instagram"></i> Followers Instagram</div>
+        <div class="price-item"><span>👤 1k</span> <span class="price-tag">4.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 2k</span> <span class="price-tag">5.4 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 3k</span> <span class="price-tag">6.3 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 4k</span> <span class="price-tag">7.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 5k</span> <span class="price-tag">10 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 10k</span> <span class="price-tag">22.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👤 15k</span> <span class="price-tag">27 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+    </div>
+
+    <div class="service-card" style="border-color: #ff8500;">
+        <div class="service-header" style="color: #ff8500;"><i class="fa-solid fa-heart"></i> Likes Instagram</div>
+        <div class="price-item"><span>👍 1k</span> <span class="price-tag">1.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👍 2k</span> <span class="price-tag">2 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+        <div class="price-item"><span>👍 10k</span> <span class="price-tag">7 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
+    </div>
+
+    <div class="features">
+        <span><i class="fa-solid fa-circle-check"></i> جودة عالية</span>
+        <span><i class="fa-solid fa-bolt"></i> سرعة تنفيذ</span>
+        <span><i class="fa-solid fa-lock"></i> مصداقية 100%</span>
+    </div>
+
+    <a href="https://mohammedlefi.github.io/Page-de-paiement-twins-shop" target="_blank" class="pay-btn">
+        <i class="fa-solid fa-credit-card"></i> صفحة الدفع الرسمية
+    </a>
+
+    <div style="text-align: center; color: #777; font-size: 0.8rem; margin-top: 10px;">
+        📲 تواصل معنا: +21621133138
+    </div>
+</div>
+
+</body>
+          </html>
+          
