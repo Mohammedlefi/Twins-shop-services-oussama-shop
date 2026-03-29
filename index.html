@@ -1,40 +1,302 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TWINS SHOP - Full Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-neon: #00d2ff;
-            --secondary-neon: #9d50bb;
-            --accent-neon: #ff0055;
-            --bg-dark: #0a0a0c;
-            --glass-bg: rgba(255, 255, 255, 0.07);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWINS SHOP</title>
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top,#020617,#000);
+  color:white;
+  overflow-x:hidden;
+}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+.container {
+  margin:15px auto;
+  max-width: 1100px;
+  padding:20px;
+  border-radius:20px;
+  background: rgba(0,0,0,0.15);
+  backdrop-filter: blur(25px);
+  border: 2px solid #ff4500;
+  box-shadow: 0 0 40px #ff4500, 0 0 80px #ff6347;
+}
 
-        body {
-            background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%);
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+.title {
+  text-align:center;
+  font-size:32px;
+  color:#ff4500;
+  text-shadow: 0 0 15px #ff4500, 0 0 25px #ff6347;
+}
 
-        .controller-container {
-            width: 100%;
-            max-width: 550px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 35px;
-            padding: 20px;
-            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+.verify {
+  width:14px;
+  height:14px;
+  background:#ff6347;
+  border-radius:50%;
+  display:inline-block;
+  box-shadow:0 0 20px #ff6347;
+}
+
+.card {
+  background: rgba(0,0,0,0.5);
+  padding:15px;
+  margin:12px 0;
+  border-radius:15px;
+  border:1px solid rgba(255,69,0,0.5);
+  transition: 0.3s;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#fff;
+  background: linear-gradient(135deg, #ff4500, #ff6347);
+  box-shadow:0 0 15px #ff4500,0 0 30px #ff6347;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow:0 0 35px #ff4500, 0 0 60px #ff6347;
+}
+
+.btn {
+  padding:8px 15px;
+  border-radius:10px;
+  background: linear-gradient(45deg,#ff4500,#ff6347);
+  font-weight:bold;
+  cursor:pointer;
+  border:none;
+  color:black;
+  font-size:14px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff4500, 0 0 25px #ff6347;
+}
+
+.payments {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
+
+.pay {
+  padding:10px 15px;
+  border-radius:12px;
+  background: linear-gradient(45deg,#ff4500,#ff6347);
+  font-weight:bold;
+  color:black;
+  cursor:pointer;
+  transition: 0.2s;
+}
+
+.pay:hover {
+  transform: scale(1.05);
+  box-shadow:0 0 15px #ff4500, 0 0 25px #ff6347;
+}
+
+/* FEEDBACK NEON GLASS RED/BLUE */
+.feedback {
+  display:flex;
+  overflow-x:auto;
+  gap:15px;
+  padding:10px 0;
+}
+
+.comment {
+  min-width:260px;
+  background: rgba(10,10,10,0.4);
+  padding:10px;
+  border-radius:15px;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  border-left: 4px solid #ff0033;
+  box-shadow:0 0 15px #ff0033,0 0 30px #3300ff;
+  backdrop-filter: blur(15px);
+}
+
+.avatar {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background: linear-gradient(45deg,#ff0033,#3300ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  color:white;
+  font-size:16px;
+}
+
+.bubble {
+  background: rgba(0,0,0,0.5);
+  padding:8px;
+  border-radius:10px;
+  flex:1;
+  color:#fff;
+}
+
+.name {
+  color:#ff0033;
+  font-weight:bold;
+  font-size:14px;
+  margin-bottom:3px;
+  text-shadow: 0 0 6px #ff0033,0 0 10px #3300ff;
+}
+
+.support {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#ff4500;
+  padding:18px;
+  border-radius:50%;
+  font-size:22px;
+  color:black;
+  cursor:pointer;
+  box-shadow:0 0 15px #ff4500, 0 0 30px #ff6347;
+}
+
+.modal {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:99;
+}
+
+.modal-content {
+  background:#111;
+  color:white;
+  padding:20px;
+  border-radius:15px;
+  width:80%;
+  max-width:500px;
+}
+
+.links {
+  text-align:center;
+  margin-top:20px;
+}
+
+.links a {
+  margin:5px;
+  display:inline-block;
+  padding:10px 15px;
+  background: linear-gradient(45deg,#ff4500,#ff6347);
+  color:black;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.links a:hover {
+  transform: scale(1.05);
+  box-shadow:0 0 10px #ff4500,0 0 20px #ff6347;
+}
+</style>
+<script>
+function order(service,price){
+  let msg = "نحب نطلب:\n" + service + "\nالسعر: " + price + "\nTWINS SHOP";
+  window.open("https://wa.me/21621133138?text=" + encodeURIComponent(msg));
+}
+
+function openContact(){
+  document.getElementById("contact").style.display="flex";
+}
+
+function closeContact(){
+  document.getElementById("contact").style.display="none";
+}
+
+function sendMail(){
+  let msg = document.getElementById("msg").value;
+  window.location.href="mailto:lefimohamed181924@gmail.com?subject=رسالة من الموقع&body="+encodeURIComponent(msg);
+}
+</script>
+<body>
+<div class="container">
+<div class="title"><span class="verify"></span> 🚀 TWINS SHOP</div>
+<p style="text-align:center;">🤝 بالتعاون مع Oussama Shop</p>
+
+<h3>📘 فايسبوك</h3>
+<div class="card">👥 1k ➜ 2 DT <button class="btn" onclick="order('فايسبوك 1k','2 DT')">اطلب</button></div>
+<div class="card">👥 2k ➜ 2.5 DT <button class="btn" onclick="order('فايسبوك 2k','2.5 DT')">اطلب</button></div>
+<div class="card">👥 10k ➜ 9 DT <button class="btn" onclick="order('فايسبوك 10k','9 DT')">اطلب</button></div>
+
+<h3>👀 تيك توك</h3>
+<div class="card">▶️ 10k ➜ 1.5 DT <button class="btn" onclick="order('تيك توك 10k','1.5 DT')">اطلب</button></div>
+<div class="card">▶️ 30k ➜ 3 DT <button class="btn" onclick="order('تيك توك 30k','3 DT')">اطلب</button></div>
+<div class="card">▶️ 40k ➜ 3.5 DT <button class="btn" onclick="order('تيك توك 40k','3.5 DT')">اطلب</button></div>
+
+<h3>📸 Instagram</h3>
+<div class="card">👤 1k ➜ 4.5 DT <button class="btn" onclick="order('Instagram 1k','4.5 DT')">اطلب</button></div>
+<div class="card">👤 2k ➜ 5.4 DT <button class="btn" onclick="order('Instagram 2k','5.4 DT')">اطلب</button></div>
+<div class="card">👤 3k ➜ 6.3 DT <button class="btn" onclick="order('Instagram 3k','6.3 DT')">اطلب</button></div>
+<div class="card">👤 4k ➜ 7.5 DT <button class="btn" onclick="order('Instagram 4k','7.5 DT')">اطلب</button></div>
+<div class="card">👤 5k ➜ 10 DT <button class="btn" onclick="order('Instagram 5k','10 DT')">اطلب</button></div>
+<div class="card">👤 6k ➜ 12 DT <button class="btn" onclick="order('Instagram 6k','12 DT')">اطلب</button></div>
+<div class="card">👤 10k ➜ 22.5 DT <button class="btn" onclick="order('Instagram 10k','22.5 DT')">اطلب</button></div>
+<div class="card">👤 15k ➜ 27 DT <button class="btn" onclick="order('Instagram 15k','27 DT')">اطلب</button></div>
+
+<h3>❤️ Likes</h3>
+<div class="card">👍 1k ➜ 1.5 DT <button class="btn" onclick="order('Likes 1k','1.5 DT')">اطلب</button></div>
+<div class="card">👍 2k ➜ 2 DT <button class="btn" onclick="order('Likes 2k','2 DT')">اطلب</button></div>
+<div class="card">👍 10k ➜ 7 DT <button class="btn" onclick="order('Likes 10k','7 DT')">اطلب</button></div>
+
+<h3>💳 طرق الدفع</h3>
+<div class="payments">
+<div class="pay">Visa</div>
+<div class="pay">MasterCard</div>
+<div class="pay">D17</div>
+<div class="pay">Binance</div>
+<div class="pay">Cash</div>
+</div>
+
+<h3>💬 آراء الحرفاء</h3>
+<div class="feedback">
+<div class="comment"><div class="avatar">M</div><div class="bubble"><div class="name">Mohamed</div>الخدمة ممتازة برشا 🔥</div></div>
+<div class="comment"><div class="avatar">S</div><div class="bubble"><div class="name">Sami</div>سريع و توثيق ممتاز ✅</div></div>
+<div class="comment"><div class="avatar">A</div><div class="bubble"><div class="name">Amine</div>السعر معقول والخدمة ممتازة</div></div>
+<div class="comment"><div class="avatar">Y</div><div class="bubble"><div class="name">Yassine</div>خدمتكم متعبرش عليها 💯</div></div>
+<div class="comment"><div class="avatar">H</div><div class="bubble"><div class="name">Hamza</div>top qualité 👌</div></div>
+<div class="comment"><div class="avatar">L</div><div class="bubble"><div class="name">Lotfi</div>دفع سريع وما فيه مشاكل 🔥</div></div>
+<div class="comment"><div class="avatar">N</div><div class="bubble"><div class="name">Nabil</div>التواصل ممتاز والتسليم فوري ⚡</div></div>
+<div class="comment"><div class="avatar">R</div><div class="bubble"><div class="name">Rania</div>خدمة دعم رائع 👌</div></div>
+<div class="comment"><div class="avatar">F</div><div class="bubble"><div class="name">Firas</div>توثيق حقيقي وموثوق 🔒</div></div>
+<div class="comment"><div class="avatar">S2</div><div class="bubble"><div class="name">Sana</div>التجربة ممتازة ونرجع نطلب مرة أخرى 💯</div></div>
+</div>
+
+<div class="links">
+<a href="https://mohammedlefi.github.io/Page-de-paiement-twins-shop">💳 صفحة الدفع</a>
+<a href="https://lefistore.b3na.com">🛒 المتجر</a>
+<a onclick="openContact()">📩 تواصل معنا</a>
+</div>
+
+<a class="support" href="https://wa.me/21621133138">🎧</a>
+
+<div class="modal" id="contact">
+<div class="modal-content">
+<h3>📩 اكتب رسالتك</h3>
+<textarea id="msg" style="width:100%;height:120px;"></textarea>
+<br><br>
+<button onclick="sendMail()">إرسال</button>
+<button onclick="closeContact()" style="margin-left:10px;">إغلاق</button>
+</div>
+</div>
+</body>
+</html>            box-shadow: 0 0 40px rgba(0,0,0,0.8);
             position: relative;
         }
 
