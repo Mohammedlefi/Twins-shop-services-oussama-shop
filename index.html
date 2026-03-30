@@ -257,6 +257,13 @@ function sendMail(){
 <div class="comment"><div class="avatar">R</div><div><div class="name">رانية</div>يعطيكم الصحة ❤️</div></div>
 <div class="comment"><div class="avatar">F</div><div><div class="name">فراس</div>top service 🔥</div></div>
 <div class="comment"><div class="avatar">S2</div><div><div class="name">سناء</div>عجبني برشا الموقع</div></div>
+<div class="comment"><div class="avatar">K</div><div><div class="name">كريم</div>والله موقع محترم و الخدمة سريعة برشا 🔥</div></div>
+
+<div class="comment"><div class="avatar">B</div><div><div class="name">بلال</div>طلبت و وصلني في نفس النهار 👌</div></div>
+
+<div class="comment"><div class="avatar">Z</div><div><div class="name">زهير</div>ثقة و مصداقية 100% 💯</div></div>
+
+<div class="comment"><div class="avatar">M2</div><div><div class="name">مروان</div>أفضل موقع تعاملت معاه بصراحة</div></div>
 </div>
 
 <div class="links">
@@ -277,5 +284,100 @@ function sendMail(){
 </div>
 </div>
 
+<div id="userModal" style="
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:#000c;
+justify-content:center;
+align-items:center;
+z-index:999;
+">
+
+<div style="
+background:#111;
+padding:25px;
+border-radius:15px;
+width:300px;
+text-align:center;
+box-shadow:0 0 20px #00ffff;
+">
+
+<h3>📲 معلوماتك</h3>
+
+<input id="name" placeholder="الاسم" style="width:100%;margin:5px;padding:8px;"><br>
+<input id="phone" placeholder="+216 رقم الهاتف" style="width:100%;margin:5px;padding:8px;"><br>
+<input id="email" placeholder="Email" style="width:100%;margin:5px;padding:8px;"><br>
+
+<button onclick="saveUser()" style="
+margin-top:10px;
+padding:10px;
+width:100%;
+background:#00ffff;
+border:none;
+border-radius:10px;
+font-weight:bold;
+">حفظ</button>
+<script>
+// تحميل البيانات من التخزين
+let userName = localStorage.getItem("name");
+let userPhone = localStorage.getItem("phone");
+let userEmail = localStorage.getItem("email");
+
+// إذا ما فماش بيانات → نفتح الفورم
+window.onload = function(){
+  if(!userName || !userPhone || !userEmail){
+    document.getElementById("userModal").style.display="flex";
+  }
+}
+
+// حفظ البيانات
+function saveUser(){
+  let n = document.getElementById("name").value;
+  let p = document.getElementById("phone").value;
+  let e = document.getElementById("email").value;
+
+  if(n=="" || p=="" || e==""){
+    alert("عبي معلوماتك الكل 👇");
+    return;
+  }
+
+  localStorage.setItem("name",n);
+  localStorage.setItem("phone",p);
+  localStorage.setItem("email",e);
+
+  document.getElementById("userModal").style.display="none";
+
+  userName=n;
+  userPhone=p;
+  userEmail=e;
+}
+
+// تعديل الطلب
+function order(service, price){
+ let usd=(price*0.32).toFixed(2);
+
+ let msg=`Hello! 👏 I just placed the following order:
+
+📲 Information just contact:
+Name: "${userName}"
+Phone: "${userPhone}"
+Email: "${userEmail}"
+
+🛒 Order:
+• 🔥🌍 ${service}
+
+💰 Price (TND): ${price} DT
+💵 Price (USD): $${usd}
+
+━━━━━━━━━━━━
+🚀 TWINS SHOP`;
+
+ window.open("https://wa.me/21621133138?text="+encodeURIComponent(msg));
+}
+</script>
+</div>
+</div>
 </body>
 </html>
