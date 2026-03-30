@@ -4,439 +4,278 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TWINS SHOP</title>
+
 <style>
 body {
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Segoe UI',sans-serif;
   background: radial-gradient(circle at top,#020617,#000);
   color:white;
-  overflow-x:hidden;
 }
 
-.container {
-  margin:15px auto;
-  max-width: 1100px;
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:20px auto;
   padding:20px;
   border-radius:20px;
-  background: rgba(0,0,0,0.15);
-  backdrop-filter: blur(25px);
-  border: 2px solid #ff4500;
-  box-shadow: 0 0 40px #ff4500, 0 0 80px #ff6347;
+  background:rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+  border:1px solid #00ffff;
+  box-shadow:0 0 20px #00ffff;
 }
 
-.title {
+.title{
   text-align:center;
   font-size:32px;
-  color:#ff4500;
-  text-shadow: 0 0 15px #ff4500, 0 0 25px #ff6347;
+  color:#00ffff;
+  text-shadow:0 0 10px #00ffff;
 }
 
-.verify {
-  width:14px;
-  height:14px;
-  background:#ff6347;
+.verify{
+  width:12px;height:12px;
+  background:#00ff88;
   border-radius:50%;
   display:inline-block;
-  box-shadow:0 0 20px #ff6347;
+  box-shadow:0 0 10px #00ff88;
 }
 
-.card {
-  background: rgba(0,0,0,0.5);
+/* CARDS */
+.card{
+  margin:10px 0;
   padding:15px;
-  margin:12px 0;
   border-radius:15px;
-  border:1px solid rgba(255,69,0,0.5);
-  transition: 0.3s;
   display:flex;
-  justify-content: space-between;
-  align-items: center;
-  color:#fff;
-  background: linear-gradient(135deg, #ff4500, #ff6347);
-  box-shadow:0 0 15px #ff4500,0 0 30px #ff6347;
+  justify-content:space-between;
+  align-items:center;
+  background: linear-gradient(135deg,#020617,#0f172a);
+  border:1px solid #00ffff33;
+  box-shadow:0 0 10px #00ffff55;
+  transition:0.3s;
 }
 
-.card:hover {
-  transform: scale(1.04);
-  box-shadow:0 0 35px #ff4500, 0 0 60px #ff6347;
+.card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 25px #00ffff;
 }
 
-.btn {
+.btn{
   padding:8px 15px;
   border-radius:10px;
-  background: linear-gradient(45deg,#ff4500,#ff6347);
-  font-weight:bold;
-  cursor:pointer;
+  background:linear-gradient(45deg,#00ffff,#7c3aed);
   border:none;
-  color:black;
-  font-size:14px;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #ff4500, 0 0 25px #ff6347;
-}
-
-.payments {
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-top:15px;
-}
-
-.pay {
-  padding:10px 15px;
-  border-radius:12px;
-  background: linear-gradient(45deg,#ff4500,#ff6347);
   font-weight:bold;
-  color:black;
   cursor:pointer;
-  transition: 0.2s;
 }
 
-.pay:hover {
-  transform: scale(1.05);
-  box-shadow:0 0 15px #ff4500, 0 0 25px #ff6347;
+.btn:hover{
+  transform:scale(1.1);
 }
 
-/* FEEDBACK NEON GLASS RED/BLUE */
-.feedback {
+/* PAYMENTS */
+.payments{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.pay{
+  padding:10px 15px;
+  border-radius:10px;
+  background:linear-gradient(45deg,#00ffff,#00ffcc);
+  color:black;
+  font-weight:bold;
+}
+
+/* COMMENTS */
+.feedback{
   display:flex;
   overflow-x:auto;
   gap:15px;
-  padding:10px 0;
 }
 
-.comment {
-  min-width:260px;
-  background: rgba(10,10,10,0.4);
+.comment{
+  min-width:250px;
+  background:rgba(0,0,0,0.4);
   padding:10px;
   border-radius:15px;
   display:flex;
   gap:10px;
-  align-items:flex-start;
-  border-left: 4px solid #ff0033;
-  box-shadow:0 0 15px #ff0033,0 0 30px #3300ff;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  box-shadow:0 0 15px #3300ff,0 0 15px #ff0033;
 }
 
-.avatar {
-  width:45px;
-  height:45px;
+.avatar{
+  width:40px;height:40px;
   border-radius:50%;
-  background: linear-gradient(45deg,#ff0033,#3300ff);
+  background:linear-gradient(45deg,#ff0033,#3300ff);
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+.name{
+  color:#00ffff;
   font-weight:bold;
-  color:white;
-  font-size:16px;
 }
 
-.bubble {
-  background: rgba(0,0,0,0.5);
-  padding:8px;
-  border-radius:10px;
-  flex:1;
-  color:#fff;
-}
-
-.name {
-  color:#ff0033;
-  font-weight:bold;
-  font-size:14px;
-  margin-bottom:3px;
-  text-shadow: 0 0 6px #ff0033,0 0 10px #3300ff;
-}
-
-.support {
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#ff4500;
-  padding:18px;
-  border-radius:50%;
-  font-size:22px;
-  color:black;
-  cursor:pointer;
-  box-shadow:0 0 15px #ff4500, 0 0 30px #ff6347;
-}
-
-.modal {
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-  z-index:99;
-}
-
-.modal-content {
-  background:#111;
-  color:white;
-  padding:20px;
-  border-radius:15px;
-  width:80%;
-  max-width:500px;
-}
-
-.links {
+/* LINKS */
+.links{
   text-align:center;
   margin-top:20px;
 }
 
-.links a {
+.links a{
   margin:5px;
   display:inline-block;
-  padding:10px 15px;
-  background: linear-gradient(45deg,#ff4500,#ff6347);
+  padding:10px;
+  border-radius:10px;
+  background:linear-gradient(45deg,#00ffff,#7c3aed);
   color:black;
-  border-radius:12px;
   text-decoration:none;
-  font-weight:bold;
 }
 
-.links a:hover {
-  transform: scale(1.05);
-  box-shadow:0 0 10px #ff4500,0 0 20px #ff6347;
+/* SUPPORT */
+.support{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#00ffff;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:#000c;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
 }
 </style>
+
 <script>
-function order(service,price){
-  let msg = "نحب نطلب:\n" + service + "\nالسعر: " + price + "\nTWINS SHOP";
-  window.open("https://wa.me/21621133138?text=" + encodeURIComponent(msg));
+function order(service, price){
+ let usd=(price*0.32).toFixed(2);
+
+ let msg=`Hello! 👏 I just placed the following order:
+
+📲 Information just contact:
+Name: "............."
+Phone: "+216........"
+Email: "............."
+
+🛒 Order:
+• 🔥🌍 ${service}
+
+💰 Price (TND): ${price} DT
+💵 Price (USD): $${usd}
+
+━━━━━━━━━━━━
+🚀 TWINS SHOP`;
+
+ window.open("https://wa.me/21621133138?text="+encodeURIComponent(msg));
 }
 
 function openContact(){
-  document.getElementById("contact").style.display="flex";
+ document.getElementById("c").style.display="flex";
 }
 
 function closeContact(){
-  document.getElementById("contact").style.display="none";
+ document.getElementById("c").style.display="none";
 }
 
 function sendMail(){
-  let msg = document.getElementById("msg").value;
-  window.location.href="mailto:lefimohamed181924@gmail.com?subject=رسالة من الموقع&body="+encodeURIComponent(msg);
+ let m=document.getElementById("msg").value;
+ window.location.href="mailto:lefimohamed181924@gmail.com?body="+m;
 }
 </script>
+
+</head>
+
 <body>
+
 <div class="container">
+
 <div class="title"><span class="verify"></span> 🚀 TWINS SHOP</div>
 <p style="text-align:center;">🤝 بالتعاون مع Oussama Shop</p>
 
 <h3>📘 فايسبوك</h3>
-<div class="card">👥 1k ➜ 2 DT <button class="btn" onclick="order('فايسبوك 1k','2 DT')">اطلب</button></div>
-<div class="card">👥 2k ➜ 2.5 DT <button class="btn" onclick="order('فايسبوك 2k','2.5 DT')">اطلب</button></div>
-<div class="card">👥 10k ➜ 9 DT <button class="btn" onclick="order('فايسبوك 10k','9 DT')">اطلب</button></div>
+<div class="card">👥 1k ➜ 2 DT <button class="btn" onclick="order('Facebook 1k',2)">اطلب</button></div>
+<div class="card">👥 2k ➜ 2.5 DT <button class="btn" onclick="order('Facebook 2k',2.5)">اطلب</button></div>
+<div class="card">👥 10k ➜ 9 DT <button class="btn" onclick="order('Facebook 10k',9)">اطلب</button></div>
 
 <h3>👀 تيك توك</h3>
-<div class="card">▶️ 10k ➜ 1.5 DT <button class="btn" onclick="order('تيك توك 10k','1.5 DT')">اطلب</button></div>
-<div class="card">▶️ 30k ➜ 3 DT <button class="btn" onclick="order('تيك توك 30k','3 DT')">اطلب</button></div>
-<div class="card">▶️ 40k ➜ 3.5 DT <button class="btn" onclick="order('تيك توك 40k','3.5 DT')">اطلب</button></div>
+<div class="card">▶️ 10k ➜ 1.5 DT <button class="btn" onclick="order('Tiktok 10k',1.5)">اطلب</button></div>
+<div class="card">▶️ 30k ➜ 3 DT <button class="btn" onclick="order('Tiktok 30k',3)">اطلب</button></div>
+<div class="card">▶️ 40k ➜ 3.5 DT <button class="btn" onclick="order('Tiktok 40k',3.5)">اطلب</button></div>
 
 <h3>📸 Instagram</h3>
-<div class="card">👤 1k ➜ 4.5 DT <button class="btn" onclick="order('Instagram 1k','4.5 DT')">اطلب</button></div>
-<div class="card">👤 2k ➜ 5.4 DT <button class="btn" onclick="order('Instagram 2k','5.4 DT')">اطلب</button></div>
-<div class="card">👤 3k ➜ 6.3 DT <button class="btn" onclick="order('Instagram 3k','6.3 DT')">اطلب</button></div>
-<div class="card">👤 4k ➜ 7.5 DT <button class="btn" onclick="order('Instagram 4k','7.5 DT')">اطلب</button></div>
-<div class="card">👤 5k ➜ 10 DT <button class="btn" onclick="order('Instagram 5k','10 DT')">اطلب</button></div>
-<div class="card">👤 6k ➜ 12 DT <button class="btn" onclick="order('Instagram 6k','12 DT')">اطلب</button></div>
-<div class="card">👤 10k ➜ 22.5 DT <button class="btn" onclick="order('Instagram 10k','22.5 DT')">اطلب</button></div>
-<div class="card">👤 15k ➜ 27 DT <button class="btn" onclick="order('Instagram 15k','27 DT')">اطلب</button></div>
+<div class="card">👤 1k ➜ 4.5 DT <button class="btn" onclick="order('Instagram 1k',4.5)">اطلب</button></div>
+<div class="card">👤 2k ➜ 5.4 DT <button class="btn" onclick="order('Instagram 2k',5.4)">اطلب</button></div>
+<div class="card">👤 3k ➜ 6.3 DT <button class="btn" onclick="order('Instagram 3k',6.3)">اطلب</button></div>
+<div class="card">👤 4k ➜ 7.5 DT <button class="btn" onclick="order('Instagram 4k',7.5)">اطلب</button></div>
+<div class="card">👤 5k ➜ 10 DT <button class="btn" onclick="order('Instagram 5k',10)">اطلب</button></div>
+<div class="card">👤 6k ➜ 12 DT <button class="btn" onclick="order('Instagram 6k',12)">اطلب</button></div>
+<div class="card">👤 10k ➜ 22.5 DT <button class="btn" onclick="order('Instagram 10k',22.5)">اطلب</button></div>
+<div class="card">👤 15k ➜ 27 DT <button class="btn" onclick="order('Instagram 15k',27)">اطلب</button></div>
 
 <h3>❤️ Likes</h3>
-<div class="card">👍 1k ➜ 1.5 DT <button class="btn" onclick="order('Likes 1k','1.5 DT')">اطلب</button></div>
-<div class="card">👍 2k ➜ 2 DT <button class="btn" onclick="order('Likes 2k','2 DT')">اطلب</button></div>
-<div class="card">👍 10k ➜ 7 DT <button class="btn" onclick="order('Likes 10k','7 DT')">اطلب</button></div>
+<div class="card">👍 1k ➜ 1.5 DT <button class="btn" onclick="order('Likes 1k',1.5)">اطلب</button></div>
+<div class="card">👍 2k ➜ 2 DT <button class="btn" onclick="order('Likes 2k',2)">اطلب</button></div>
+<div class="card">👍 10k ➜ 7 DT <button class="btn" onclick="order('Likes 10k',7)">اطلب</button></div>
 
 <h3>💳 طرق الدفع</h3>
 <div class="payments">
-<div class="pay">Visa</div>
-<div class="pay">MasterCard</div>
-<div class="pay">D17</div>
-<div class="pay">Binance</div>
-<div class="pay">Cash</div>
+<div class="pay">💳 Visa</div>
+<div class="pay">💳 MasterCard</div>
+<div class="pay">📱 D17</div>
+<div class="pay">💰 Binance</div>
+<div class="pay">💵 Cash</div>
 </div>
 
 <h3>💬 آراء الحرفاء</h3>
 <div class="feedback">
-<div class="comment"><div class="avatar">M</div><div class="bubble"><div class="name">Mohamed</div>الخدمة ممتازة برشا 🔥</div></div>
-<div class="comment"><div class="avatar">S</div><div class="bubble"><div class="name">Sami</div>سريع و توثيق ممتاز ✅</div></div>
-<div class="comment"><div class="avatar">A</div><div class="bubble"><div class="name">Amine</div>السعر معقول والخدمة ممتازة</div></div>
-<div class="comment"><div class="avatar">Y</div><div class="bubble"><div class="name">Yassine</div>خدمتكم متعبرش عليها 💯</div></div>
-<div class="comment"><div class="avatar">H</div><div class="bubble"><div class="name">Hamza</div>top qualité 👌</div></div>
-<div class="comment"><div class="avatar">L</div><div class="bubble"><div class="name">Lotfi</div>دفع سريع وما فيه مشاكل 🔥</div></div>
-<div class="comment"><div class="avatar">N</div><div class="bubble"><div class="name">Nabil</div>التواصل ممتاز والتسليم فوري ⚡</div></div>
-<div class="comment"><div class="avatar">R</div><div class="bubble"><div class="name">Rania</div>خدمة دعم رائع 👌</div></div>
-<div class="comment"><div class="avatar">F</div><div class="bubble"><div class="name">Firas</div>توثيق حقيقي وموثوق 🔒</div></div>
-<div class="comment"><div class="avatar">S2</div><div class="bubble"><div class="name">Sana</div>التجربة ممتازة ونرجع نطلب مرة أخرى 💯</div></div>
+<div class="comment"><div class="avatar">M</div><div><div class="name">محمد</div>خدمة باهية برشا 🔥</div></div>
+<div class="comment"><div class="avatar">S</div><div><div class="name">سامي</div>وصلني الطلب في وقت قياسي</div></div>
+<div class="comment"><div class="avatar">A</div><div><div class="name">أمين</div>ثقة 100% 👌</div></div>
+<div class="comment"><div class="avatar">Y</div><div><div class="name">ياسين</div>نرجع نطلب مرة اخرى 💯</div></div>
+<div class="comment"><div class="avatar">H</div><div><div class="name">حمزة</div>خدمة نظيفة و سريعة</div></div>
+<div class="comment"><div class="avatar">L</div><div><div class="name">لطفي</div>تعامل ممتاز 🔒</div></div>
+<div class="comment"><div class="avatar">N</div><div><div class="name">نبيل</div>الدفع ساهل برشا</div></div>
+<div class="comment"><div class="avatar">R</div><div><div class="name">رانية</div>يعطيكم الصحة ❤️</div></div>
+<div class="comment"><div class="avatar">F</div><div><div class="name">فراس</div>top service 🔥</div></div>
+<div class="comment"><div class="avatar">S2</div><div><div class="name">سناء</div>عجبني برشا الموقع</div></div>
 </div>
 
 <div class="links">
-<a href="https://mohammedlefi.github.io/Page-de-paiement-twins-shop">💳 صفحة الدفع</a>
+<a href="https://mohammedlefi.github.io/Page-de-paiement-twins-shop">💳 الدفع</a>
 <a href="https://lefistore.b3na.com">🛒 المتجر</a>
-<a onclick="openContact()">📩 تواصل معنا</a>
+<a onclick="openContact()">📩 تواصل</a>
 </div>
 
 <a class="support" href="https://wa.me/21621133138">🎧</a>
 
-<div class="modal" id="contact">
+</div>
+
+<div class="modal" id="c">
 <div class="modal-content">
-<h3>📩 اكتب رسالتك</h3>
-<textarea id="msg" style="width:100%;height:120px;"></textarea>
-<br><br>
+<textarea id="msg" style="width:100%;height:100px;"></textarea><br>
 <button onclick="sendMail()">إرسال</button>
-<button onclick="closeContact()" style="margin-left:10px;">إغلاق</button>
+<button onclick="closeContact()">إغلاق</button>
 </div>
-</div>
-</body>
-</html>            box-shadow: 0 0 40px rgba(0,0,0,0.8);
-            position: relative;
-        }
-
-        header { text-align: center; margin-bottom: 25px; }
-        .logo-main { font-size: 2.2rem; font-weight: 900; color: #fff; text-shadow: 0 0 15px var(--primary-neon); }
-        .collab { font-size: 0.9rem; color: #ccc; margin-top: 5px; }
-        .collab span { color: var(--primary-neon); font-weight: bold; }
-
-        .service-card {
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 20px;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-left: 4px solid var(--primary-neon);
-        }
-
-        .service-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.02);
-        }
-
-        .price-tag {
-            color: #fff;
-            font-weight: bold;
-            background: rgba(0, 210, 255, 0.2);
-            padding: 2px 10px;
-            border-radius: 5px;
-            min-width: 70px;
-            text-align: center;
-        }
-
-        .btn-wa {
-            background: #25d366;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .pay-btn {
-            display: block;
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(45deg, #ff0055, #ff5e3a);
-            color: white;
-            text-align: center;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-top: 10px;
-        }
-
-        .features span i { color: #2ecc71; margin-left: 5px; }
-
-    </style>
-</head>
-<body>
-
-<div class="controller-container">
-    <header>
-        <div class="logo-main">🚀 TWINS SHOP</div>
-        <div class="collab">🤝 بالتعاون مع <span>Oussama Shop</span></div>
-    </header>
-
-    <div class="service-card" style="border-color: #1877F2;">
-        <div class="service-header" style="color: #1877F2;"><i class="fab fa-facebook"></i> متابعين فايسبوك</div>
-        <div class="price-item"><span>👥 1k متابع</span> <span class="price-tag">2 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👥 2k متابع</span> <span class="price-tag">2.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👥 10k متابع</span> <span class="price-tag">9 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-    </div>
-
-    <div class="service-card" style="border-color: #ff0055;">
-        <div class="service-header" style="color: #ff0055;"><i class="fab fa-tiktok"></i> مشاهدات تيك توك</div>
-        <div class="price-item"><span>▶️ 10k مشاهدة</span> <span class="price-tag">1.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>▶️ 30k مشاهدة</span> <span class="price-tag">3 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>▶️ 40k مشاهدة</span> <span class="price-tag">3.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-    </div>
-
-    <div class="service-card" style="border-color: #E1306C;">
-        <div class="service-header" style="color: #E1306C;"><i class="fab fa-instagram"></i> Followers Instagram</div>
-        <div class="price-item"><span>👤 1k</span> <span class="price-tag">4.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 2k</span> <span class="price-tag">5.4 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 3k</span> <span class="price-tag">6.3 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 4k</span> <span class="price-tag">7.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 5k</span> <span class="price-tag">10 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 10k</span> <span class="price-tag">22.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👤 15k</span> <span class="price-tag">27 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-    </div>
-
-    <div class="service-card" style="border-color: #ff8500;">
-        <div class="service-header" style="color: #ff8500;"><i class="fa-solid fa-heart"></i> Likes Instagram</div>
-        <div class="price-item"><span>👍 1k</span> <span class="price-tag">1.5 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👍 2k</span> <span class="price-tag">2 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-        <div class="price-item"><span>👍 10k</span> <span class="price-tag">7 DT</span> <a href="https://wa.me/21621133138" class="btn-wa"><i class="fab fa-whatsapp"></i> طلب</a></div>
-    </div>
-
-    <div class="features">
-        <span><i class="fa-solid fa-circle-check"></i> جودة عالية</span>
-        <span><i class="fa-solid fa-bolt"></i> سرعة تنفيذ</span>
-        <span><i class="fa-solid fa-lock"></i> مصداقية 100%</span>
-    </div>
-
-    <a href="https://mohammedlefi.github.io/Page-de-paiement-twins-shop" target="_blank" class="pay-btn">
-        <i class="fa-solid fa-credit-card"></i> صفحة الدفع الرسمية
-    </a>
-
-    <div style="text-align: center; color: #777; font-size: 0.8rem; margin-top: 10px;">
-        📲 تواصل معنا: +21621133138
-    </div>
 </div>
 
 </body>
-          </html>
-          
+</html>
